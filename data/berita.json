@@ -1,1 +1,23 @@
-
+[
+  {
+    "id": 1,
+    "judul": "Penerimaan Mahasiswa Baru 2026/2027",
+    "konten": "Universitas Musirawas resmi membuka pendaftaran mahasiswa baru untuk tahun akademik 2026/2027. Segera daftarkan diri Anda melalui jalur online atau datang langsung ke kampus.",
+    "kategori": "Akademik",
+    "tanggal": "2026-06-20"
+  },
+  {
+    "id": 2,
+    "judul": "FEB UNMURA Raih Akreditasi Baik Sekali",
+    "konten": "Fakultas Ekonomi dan Bisnis Universitas Musirawas berhasil mempertahankan akreditasi Baik Sekali dari BAN-PT untuk program studi Akuntansi dan Bisnis Digital.",
+    "kategori": "Prestasi",
+    "tanggal": "2026-06-15"
+  },
+  {
+    "id": 3,
+    "judul": "Seminar Digital Marketing untuk UMKM",
+    "konten": "FEB UNMURA bekerja sama dengan Dinas Koperasi dan UKM akan menyelenggarakan seminar gratis tentang pemasaran digital bagi pelaku UMKM di Kabupaten Musirawas.",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-06-10"
+  }
+]
