@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nama": "Dr. Budi Santoso, M.Si.",
+    "jabatan": "Dekan FEB",
+    "prodi": "Akuntansi",
+    "foto": null
+  },
+  {
+    "id": 2,
+    "nama": "Dr. Siti Nurhaliza, SE., M.Ak.",
+    "jabatan": "Kaprodi Akuntansi",
+    "prodi": "Akuntansi",
+    "foto": null
+  },
+  {
+    "id": 3,
+    "nama": "Rudi Hartono, M.Kom.",
+    "jabatan": "Kaprodi Bisnis Digital",
+    "prodi": "Bisnis Digital",
+    "foto": null
+  },
+  {
+    "id": 4,
+    "nama": "Dewi Kusuma, SE., M.M.",
+    "jabatan": "Dosen Tetap",
+    "prodi": "Akuntansi",
+    "foto": null
+  },
+  {
+    "id": 5,
+    "nama": "Agus Salim, M.T.",
+    "jabatan": "Dosen Tetap",
+    "prodi": "Bisnis Digital",
+    "foto": null
+  },
+  {
+    "id": 6,
+    "nama": "Rina Aprilia, M.Ak.",
+    "jabatan": "Dosen Tetap",
+    "prodi": "Akuntansi",
+    "foto": null
+  }
+]
