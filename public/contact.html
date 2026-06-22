@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - UNMURA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}</style>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-blue-900">UNMURA</a>
+      <div class="space-x-4">
+        <a href="/" class="text-gray-600 hover:text-blue-600">Beranda</a>
+        <a href="/berita.html" class="text-gray-600 hover:text-blue-600">Berita</a>
+        <a href="/contact.html" class="text-blue-900 font-semibold">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+    <div>
+      <h1 class="text-4xl font-bold text-blue-900 mb-6">Hubungi Kami</h1>
+      <p class="text-gray-600 mb-4"><strong>Alamat:</strong><br>Jalan Pendidikan No. 12, Kota Musirawas</p>
+      <p class="text-gray-600 mb-4"><strong>Email:</strong> febunmura@gmail.com</p>
+      <p class="text-gray-600"><strong>Telpon:</strong> +62 813-7850-930</p>
+      <div class="mt-8 h-64 rounded-2xl overflow-hidden shadow">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1234567890!2d104.6427!3d-3.2967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMTcnNDguMSJTIDEwNMKwMzgnMzMuNyJF!5e0!3m2!1sid!2sid!4v1600000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Lokasi UNMURA"></iframe>
+      </div>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-sm h-fit">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Kirim Pesan</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" id="nama" placeholder="Nama" required class="w-full p-3 border rounded-lg">
+        <input type="email" id="email" placeholder="Email" required class="w-full p-3 border rounded-lg">
+        <textarea id="pesan" rows="5" placeholder="Pesan" required class="w-full p-3 border rounded-lg"></textarea>
+        <button type="submit" class="bg-blue-900 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition font-semibold">Kirim Pesan</button>
+      </form>
+      <div id="formStatus" class="mt-4 text-center"></div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const pesan = document.getElementById('pesan').value;
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nama, email, pesan })
+        });
+        const result = await res.json();
+        document.getElementById('formStatus').innerHTML = '<p class="text-green-600">✔ ' + result.message + '</p>';
+        document.getElementById('contactForm').reset();
+      } catch (err) {
+        document.getElementById('formStatus').innerHTML = '<p class="text-red-600">Gagal mengirim pesan</p>';
+      }
+    });
+  </script>
+</body>
+</html>
